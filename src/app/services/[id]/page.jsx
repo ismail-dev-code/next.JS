@@ -1,47 +1,47 @@
+
 import React from "react";
 
+const dummyData = [
+  {
+    _id: 1,
+    name: "Ariana Gomez",
+    email: "ariana@example.com",
+    role: "Restaurant",
+    avatar: "https://i.pravatar.cc/150?img=1",
+  },
+  {
+    _id: 2,
+    name: "Liam Ahmed",
+    email: "liam@example.com",
+    role: "Charity",
+    avatar: "https://i.pravatar.cc/150?img=2",
+  },
+  {
+    _id: 3,
+    name: "Noor Hasan",
+    email: "noor@example.com",
+    role: "Admin",
+    avatar: "https://i.pravatar.cc/150?img=3",
+  },
+  {
+    _id: 4,
+    name: "Zara Rahman",
+    email: "zara@example.com",
+    role: "User",
+    avatar: "https://i.pravatar.cc/150?img=4",
+  },
+  {
+    _id: 5,
+    name: "David Lee",
+    email: "david@example.com",
+    role: "Restaurant",
+    avatar: "https://i.pravatar.cc/150?img=5",
+  },
+];
+
 export default function ServicesPageDetails({ params }) {
-  const id = params.id;
-
-  const data = [
-    {
-      _id: 1,
-      name: "Ariana Gomez",
-      email: "ariana@example.com",
-      role: "Restaurant",
-      avatar: "https://i.pravatar.cc/150?img=1",
-    },
-    {
-      _id: 2,
-      name: "Liam Ahmed",
-      email: "liam@example.com",
-      role: "Charity",
-      avatar: "https://i.pravatar.cc/150?img=2",
-    },
-    {
-      _id: 3,
-      name: "Noor Hasan",
-      email: "noor@example.com",
-      role: "Admin",
-      avatar: "https://i.pravatar.cc/150?img=3",
-    },
-    {
-      _id: 4,
-      name: "Zara Rahman",
-      email: "zara@example.com",
-      role: "User",
-      avatar: "https://i.pravatar.cc/150?img=4",
-    },
-    {
-      _id: 5,
-      name: "David Lee",
-      email: "david@example.com",
-      role: "Restaurant",
-      avatar: "https://i.pravatar.cc/150?img=5",
-    },
-  ];
-
-  const singleData = data.find((d) => d._id === Number(id));
+  const { id } = params;
+  const singleData = dummyData.find((d) => d._id === Number(id));
 
   if (!singleData) {
     return <h2 className="text-red-500 p-4">User not found</h2>;
