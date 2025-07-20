@@ -1,4 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🚀 Next.js App with Middleware Role Protection
+
+This is a simple **Next.js 15** application demonstrating middleware-based role protection using cookies. It includes route-level access control to restrict the `/services` page for admin users only.
+
+---
+
+## 📦 Tech Stack
+
+- ⚛️ **React v19**
+- 🧭 **Next.js v15**
+- 🎨 **Tailwind CSS v4**
+- 📏 **ESLint v9**
+- ⚡ **Turbopack** (for blazing-fast development)
+
+---
+
+## 🔐 Middleware Role-Based Protection
+
+This app includes a custom middleware function to control access to routes based on user roles.
+
+### ✅ Dummy Authentication Logic
+
+```js
+const dummyUserData = {
+  role: "admin",
+  email: "admin@gmail.com",
+};
+
 
 ## Getting Started
 
